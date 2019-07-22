@@ -25,7 +25,7 @@ app.post('/ideias', (req,res)=>{
        
     }
     else {
-      response.status(201).send("ideia cadastrada");
+      res.status(201).send("ideia cadastrada");
     }
 });
   
