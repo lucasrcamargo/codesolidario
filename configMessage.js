@@ -2,10 +2,7 @@ const nodeMailer = require('nodemailer');
 
 module.exports = (formulario) =>{
     let transporter = nodeMailer.createTransport({
-        host: "smtp.gmail.com", 
-        SecureConnection: false, 
-        port: 587, 
-        domínios: [ "gmail.com", "googlemail.com"], 
+        service: 'gmail',
         auth: {
             user: 'droliver.dev@gmail.com',
             pass: 'd4n13l3r09092003'
