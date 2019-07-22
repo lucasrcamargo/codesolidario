@@ -1,13 +1,24 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const configMessage = require('./configMessage');
+
 const app = express();
 
 // Serve static files....
 app.use(express.static(__dirname + '/dist/front'));
+app.use(bodyParser.json());
+app.use(cors());
 
 // Send all requests to index.html
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/front/index.html'));
+});
+
+app.post('/', (req,res)=>{
+  configMessage(req.body);
+  res.status(200).send();
 });
 
 // default Heroku PORT

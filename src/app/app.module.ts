@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { EquipeComponent } from './equipe/equipe.component';
 import { MenuComponent } from './menu/menu.component';
 import { IdeiasFormComponent } from './ideias-form/ideias-form.component';
+import { MessageService } from './message.service';
+
 
 @NgModule({
   declarations: [
@@ -30,9 +34,13 @@ import { IdeiasFormComponent } from './ideias-form/ideias-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [
+    MessageService
   ],
   bootstrap: [AppComponent]
 })
