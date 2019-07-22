@@ -8,6 +8,6 @@ export class MessageService {
 
   constructor(private http : HttpClient) { }
   sendMessage(body){
-    return this.http.post('http://localhost:3000/', body);
+    return this.http.post('http://localhost:3000', body);
   }
 }

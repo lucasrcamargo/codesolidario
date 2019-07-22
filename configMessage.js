@@ -5,16 +5,15 @@ module.exports = (formulario) =>{
         host: "smtp.gmail.com", 
         SecureConnection: false, 
         port: 587, 
-        requiresAuth: true, 
         domínios: [ "gmail.com", "googlemail.com"], 
         auth: {
-            user: 'reisdanieleoliveira@gmail.com',
+            user: 'droliver.dev@gmail.com',
             pass: 'd4n13l3r09092003'
         }
     });
     const mailOptions = {
-        from: `"${formulario.nome}" <${formulario.email}>`,
-        to: 'droliver.dev@gmail.com',
+        from: 'droliver.dev@gmail.com',
+        to: 'reisdanieleoliveira@gmail.com',
         subject: 'ideias app',
         html:`
         <strong>Nome:</strong> ${formulario.nome} <br/>
