@@ -10,6 +10,6 @@ export class MessageService {
 
   constructor(private http : HttpClient) { }
   cadIdeia(ideia: IdeiasModel) : Observable<any>{
-    return this.http.post("http://localhost:8080/ideia", ideia);
+    return this.http.post("https://codesolidario-api.herokuapp.com/ideia", ideia);
   }
 }
