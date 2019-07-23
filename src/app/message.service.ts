@@ -14,6 +14,6 @@ export class MessageService {
     return this.http.post("https://codesolidario-api.herokuapp.com/ideia", ideia);
   }
   sendMessage(contato: ContatoModel) : Observable<any>{
-    return this.http.post("http://localhost:8080/contato", contato);
+    return this.http.post("https://codesolidario-api.herokuapp.com/contato", contato);
   }
 }
