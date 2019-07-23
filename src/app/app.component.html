@@ -40,9 +40,9 @@
 			<div class="col-lg-3 col-sm-6 footer-grid-wthree mt-lg-0 mt-sm-5 mt-4">
 				<h3 class="footer-title text-uppercase mb-4">Legal</h3>
 				<ul class="links list-unstyled">
-						<li class=""><a href="#politicas">Politica e privacidade</a></li>
-						<li class=""><a href="#faq">Perguntas frequentes</a></li>
-						<li><a href="#termos-uso">Termos de Uso</a></li>
+						<li class=""><a routerLink="/politicas">Politica e privacidade</a></li>
+						<li class=""><a routerLink="/faq">Perguntas frequentes</a></li>
+						<li><a routerLink="/termos-uso">Termos de Uso</a></li>
 				</ul>
 			</div>
 			<div class="col-lg-2 col-sm-6 footer-grid-wthree mt-lg-0 mt-sm-5 mt-4">
@@ -68,40 +68,17 @@
 	</p>
 </div>
 <!-- //copyright -->	
-<!-- move top -->
-<div class="move-top text-right">
-		<a href="#home" class="move-top"> 
-			<span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
-		</a>
-	</div>
-	<!-- move top -->
 
-<!-- popup -->
-<div id="politicas" class="popup-effect">
-	<app-politicas></app-politicas>
-</div>
-<!-- //popup -->
-
-<!-- popup -->
-<div id="termos-uso" class="popup-effect">
-	<app-termos-uso></app-termos-uso>
-</div>
-<!-- popup -->
-<div id="faq" class="popup-effect">
-	<app-faq></app-faq>
-</div>
-
-
-<!-- popup for login -->
+<!-- popup for login 
 <div id="login" class="popup-effect">
 	<app-login-form></app-login-form>
-</div>
+</div>-->
 <!-- //popup for login -->
 
-<!-- popup for register -->
+<!-- popup for register 
 <div id="register" class="popup-effect">
 	<app-register-form></app-register-form>
-</div>
+</div>-->
 <!-- //popup for register -->
 <!-- popup for contato -->
 <div id="contato" class="popup-effect">
@@ -113,19 +90,3 @@
 		<app-ideias-form></app-ideias-form>
 </div>
 	<!-- //popup for ideias -->
-<script type="">
-	$(document).ready(function(){
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 100) {
-            $('.move-top').fadeIn();
-        } else {
-            $('.move-top').fadeOut();
-        }
-    });
-
-    $('.move-top').click(function(){
-        $('html, body').animate({scrollTop : 0},800);
-        return false;
-    });
-});
-</script>

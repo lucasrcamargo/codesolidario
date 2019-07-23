@@ -16,10 +16,8 @@ export class ContatoComponent implements OnInit {
   }
   send(){
     this.messageService.sendMessage(this.contato).subscribe(result =>{
-      console.log(result)
       Swal.fire('Formulário de contato', 'Mensagem enviada com sucesso', 'success');
     }, err =>{
-      console.log(err)
       Swal.fire('Formulário de contato', 'Falha no envio da mensagem', 'error');
     });
   }
