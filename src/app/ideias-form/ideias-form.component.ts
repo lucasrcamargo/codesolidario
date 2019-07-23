@@ -11,17 +11,14 @@ import { Router } from '@angular/router';
 })
 export class IdeiasFormComponent implements OnInit {
   ideia: IdeiasModel = new IdeiasModel();
-  message;
   constructor(private messageService: MessageService, private route: Router) { }
 
   ngOnInit() {
   }
   send(){
     this.messageService.cadIdeia(this.ideia).subscribe(result =>{
-      console.log(result)
       Swal.fire('Formulário de ideias', 'Mensagem enviada com sucesso', 'success');
     }, err =>{
-      console.log(err)
       Swal.fire('Formulário de ideias', 'Falha no envio da mensagem', 'error');
     });
   }
