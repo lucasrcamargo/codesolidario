@@ -2,7 +2,7 @@
 <header class="py-4">
 	<div class="container">
 			<div id="logo">
-				<h1> <a href="index.html"><img src="assets/images/logo.png"/></a></h1>
+				<h1> <a routerLink="/"><img src="assets/images/logo.png"/></a></h1>
 			</div>
 		<app-menu [logged] = "logged"></app-menu>
 	</div>
@@ -23,7 +23,7 @@
 									<a href="https://github.com/codeSolidario" target="_blank" class="btn btn-primary btn-custom"><i class="fa fa-github"></i></a>
 							
 									<a href="#" class="btn btn-primary btn-custom"><i class="fa fa-instagram"></i></a>
-									<a href="#" class="btn btn-primary btn-custom"><i class="fa fa-linkedin"></i></a>
+									<a href="https://www.linkedin.com/company/code-solidário" target="_blank"  class="btn btn-primary btn-custom"><i class="fa fa-linkedin"></i></a>
 						</div>
 				</div>
 			</div>
@@ -40,19 +40,19 @@
 			<div class="col-lg-3 col-sm-6 footer-grid-wthree mt-lg-0 mt-sm-5 mt-4">
 				<h3 class="footer-title text-uppercase mb-4">Legal</h3>
 				<ul class="links list-unstyled">
-						<li class=""><a href="#">Politica e privacidade</a></li>
-						<li class=""><a href="#">Perguntas frequentes</a></li>
-						<li><a href="#">Termos de Uso</a></li>
+						<li class=""><a href="#politicas">Politica e privacidade</a></li>
+						<li class=""><a href="#faq">Perguntas frequentes</a></li>
+						<li><a href="#termos-uso">Termos de Uso</a></li>
 				</ul>
 			</div>
 			<div class="col-lg-2 col-sm-6 footer-grid-wthree mt-lg-0 mt-sm-5 mt-4">
 				<h3 class="footer-title text-uppercase mb-4">Mapa do site</h3>
 				<ul class="links list-unstyled">
-						<li class=""><a href="index.html">Home</a></li>
+						<li class=""><a href="#">Home</a></li>
 						<li class=""><a href="#about">Sobre</a></li>
 						<li><a href="#portfolio">Portfolio</a></li>
 						<li class=""><a href="#team">Equipe</a></li>
-						<li class=""><a [routerLink]="['contato']"> Contato </a></li>
+						<li class=""><a href="#contato"> Contato </a></li>
 						<li class=""><a href="#">Blog</a></li>
 				</ul>
 			</div>
@@ -77,27 +77,20 @@
 	<!-- move top -->
 
 <!-- popup -->
-<div id="popup1" class="popup-effect">
-	<div class="popup">
-		<img src="images/banner.png" alt="Popup Image" class="img-fluid" />
-		<p class="mt-4 ">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-			laudantium, totam rem aperiam, eaque ipsa quae ab illo quasi architecto beatae vitae dicta
-			sunt explicabo.</p>
-		<a class="close" href="#">&times;</a>
-	</div>
+<div id="politicas" class="popup-effect">
+	<app-politicas></app-politicas>
 </div>
 <!-- //popup -->
 
 <!-- popup -->
-<div id="popup2" class="popup-effect">
-	<div class="popup">
-		<p class="mt-4 ">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-			laudantium, totam rem aperiam, eaque ipsa quae ab illo quasi architecto beatae vitae dicta
-			sunt explicabo.</p>
-		<a class="close" href="#">&times;</a>
-	</div>
+<div id="termos-uso" class="popup-effect">
+	<app-termos-uso></app-termos-uso>
 </div>
-<!-- //popup -->
+<!-- popup -->
+<div id="faq" class="popup-effect">
+	<app-faq></app-faq>
+</div>
+
 
 <!-- popup for login -->
 <div id="login" class="popup-effect">

@@ -16,6 +16,9 @@ import { EquipeComponent } from './equipe/equipe.component';
 import { MenuComponent } from './menu/menu.component';
 import { IdeiasFormComponent } from './ideias-form/ideias-form.component';
 import { MessageService } from './message.service';
+import { PoliticasComponent } from './politicas/politicas.component';
+import { TermosUsoComponent } from './termos-uso/termos-uso.component';
+import { FaqComponent } from './faq/faq.component';
 
 
 @NgModule({
@@ -30,7 +33,10 @@ import { MessageService } from './message.service';
     PortfolioComponent,
     EquipeComponent,
     MenuComponent,
-    IdeiasFormComponent
+    IdeiasFormComponent,
+    PoliticasComponent,
+    TermosUsoComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
