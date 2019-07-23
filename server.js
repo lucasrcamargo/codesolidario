@@ -13,9 +13,7 @@ app.use(require('prerender-node'));
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/front/index.html'));
 });
-setInterval(function() {
-    http.get("https://codesolidario.herokuapp.com");
-}, 300000);
+
 
 
 // default Heroku PORT
