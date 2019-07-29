@@ -19,6 +19,7 @@ import { MessageService } from './message.service';
 import { PoliticasComponent } from './politicas/politicas.component';
 import { TermosUsoComponent } from './termos-uso/termos-uso.component';
 import { FaqComponent } from './faq/faq.component';
+import { ListaIdeiasComponent } from './lista-ideias/lista-ideias.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { FaqComponent } from './faq/faq.component';
     IdeiasFormComponent,
     PoliticasComponent,
     TermosUsoComponent,
-    FaqComponent
+    FaqComponent,
+    ListaIdeiasComponent
   ],
   imports: [
     BrowserModule,
