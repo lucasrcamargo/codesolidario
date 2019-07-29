@@ -5,6 +5,7 @@ import { PoliticasComponent } from './politicas/politicas.component';
 import { TermosUsoComponent } from './termos-uso/termos-uso.component';
 import { FaqComponent } from './faq/faq.component';
 import { ListaIdeiasComponent } from './lista-ideias/lista-ideias.component';
+import { UserGuard } from './user.guard';
 
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
   },
   {
     path: 'lista-ideias',
-    component: ListaIdeiasComponent
+    component: ListaIdeiasComponent,
+    canActivate: [UserGuard]
   }
 ];
 

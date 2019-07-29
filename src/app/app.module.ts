@@ -20,6 +20,7 @@ import { PoliticasComponent } from './politicas/politicas.component';
 import { TermosUsoComponent } from './termos-uso/termos-uso.component';
 import { FaqComponent } from './faq/faq.component';
 import { ListaIdeiasComponent } from './lista-ideias/lista-ideias.component';
+import { AuthService } from './auth.service';
 
 
 @NgModule({
@@ -41,14 +42,15 @@ import { ListaIdeiasComponent } from './lista-ideias/lista-ideias.component';
     ListaIdeiasComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule
 
   ],
   providers: [
-    MessageService
+    MessageService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

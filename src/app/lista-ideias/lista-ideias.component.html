@@ -1,3 +1,18 @@
-<p>
-  lista-ideias works!
-</p>
+<app-inner-banner></app-inner-banner>
+<h4>Ideias</h4>
+<div class="container py-3" >
+  <div class="row" *ngFor="let ideia of ideias">
+    <div class="col s12 m3">
+      <p>{{ ideia.nome }}</p>
+    </div>
+    <div class="col s12 m3">
+      <p>{{ ideia.email }}</p>
+    </div>
+    <div class="col s12 m3">
+      <p>{{ ideia.categoria }}</p>
+    </div>
+    <div class="col s12 m3">
+      <p>{{ ideia.descricao }}</p>
+    </div>
+  </div>
+</div>

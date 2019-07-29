@@ -11,9 +11,12 @@ export class MessageService {
 
   constructor(private http : HttpClient) { }
   cadIdeia(ideia: IdeiasModel) : Observable<any>{
-    return this.http.post("https://codesolidario-api.herokuapp.com/ideia", ideia);
+    return this.http.post("https://codesolidario-api.herokuapp.com/ideias/", ideia);
+  }
+  listarIdeias() : Observable<any>{
+    return this.http.get("https://codesolidario-api.herokuapp.com/ideias/");
   }
   sendMessage(contato: ContatoModel) : Observable<any>{
-    return this.http.post("https://codesolidario-api.herokuapp.com/contato", contato);
+    return this.http.post("https://codesolidario-api.herokuapp.com/contato/", contato);
   }
 }

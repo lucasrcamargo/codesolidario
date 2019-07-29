@@ -13,7 +13,7 @@
     </ul>
     <div class="login-icon ml-lg-2">
       <a *ngIf="!logged" class="user" href="#login"> Login</a>
-      <a *ngIf="logged" class="user" href="#logout"> Logout</a>
+      <a *ngIf="logged" class="user" (click)="logout()">Logout</a>
     </div>
   </nav>
   <div class="clear"></div>
