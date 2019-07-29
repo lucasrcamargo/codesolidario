@@ -3,6 +3,7 @@ import { IdeiasModel } from './../ideias.model';
 import { MessageService } from './../message.service';
 import  Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-ideias-form',
@@ -21,6 +22,10 @@ export class IdeiasFormComponent implements OnInit {
     }, err =>{
       Swal.fire('Formulário de ideias', 'Falha no envio da mensagem', 'error');
     });
+    this.close();
+  }
+  close(){
+    $("#ideias").modal("hide");
   }
 
 }

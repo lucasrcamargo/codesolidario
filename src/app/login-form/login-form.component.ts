@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from './../auth.service';
 import { LoginModel } from './../login.model';
 import { Router } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-login-form',
@@ -22,7 +23,14 @@ export class LoginFormComponent implements OnInit {
       else{
         this.route.navigate(['/']);
       }
+      this.close();
+    }, err =>{
+      this.route.navigate(['/']);
+      this.close();
     })
+  }
+  close(){
+    $("#login").modal("hide");
   }
 
 }

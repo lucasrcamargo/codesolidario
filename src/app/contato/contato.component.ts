@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ContatoModel } from './../contato.model';
 import { MessageService } from '../message.service';
 import Swal from 'sweetalert2';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-contato',
@@ -20,6 +21,10 @@ export class ContatoComponent implements OnInit {
     }, err =>{
       Swal.fire('Formulário de contato', 'Falha no envio da mensagem', 'error');
     });
+    this.close();
+  }
+  close(){
+    $("#contato").modal("hide");
   }
 
 }
