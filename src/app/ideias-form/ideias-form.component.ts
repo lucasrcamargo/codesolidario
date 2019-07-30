@@ -22,10 +22,10 @@ export class IdeiasFormComponent implements OnInit {
     }, err =>{
       Swal.fire('Formulário de ideias', 'Falha no envio da mensagem', 'error');
     });
+    this.route.navigate(['/']);
     this.close();
   }
   close(){
-    $("#ideias").modal("hide");
+    $("#ideias").hide();
   }
-
 }

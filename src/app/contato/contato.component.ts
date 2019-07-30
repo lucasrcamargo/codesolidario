@@ -3,6 +3,7 @@ import { ContatoModel } from './../contato.model';
 import { MessageService } from '../message.service';
 import Swal from 'sweetalert2';
 import * as $ from 'jquery';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contato',
@@ -11,7 +12,7 @@ import * as $ from 'jquery';
 })
 export class ContatoComponent implements OnInit {
   contato : ContatoModel = new ContatoModel();
-  constructor(private messageService: MessageService) { }
+  constructor(private messageService: MessageService, private route: Router) { }
 
   ngOnInit() {
   }
@@ -21,10 +22,11 @@ export class ContatoComponent implements OnInit {
     }, err =>{
       Swal.fire('Formulário de contato', 'Falha no envio da mensagem', 'error');
     });
+    this.route.navigate(['/']);
     this.close();
   }
   close(){
-    $("#contato").modal("hide");
+    $("#contato").hide();
   }
 
 }

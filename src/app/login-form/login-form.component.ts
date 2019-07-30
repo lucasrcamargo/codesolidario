@@ -11,6 +11,7 @@ import * as $ from 'jquery';
 })
 export class LoginFormComponent implements OnInit {
   login: LoginModel = new LoginModel;
+  mensagem;
   constructor(private authService: AuthService, private route: Router) { }
 
   ngOnInit() {
@@ -25,12 +26,14 @@ export class LoginFormComponent implements OnInit {
       }
       this.close();
     }, err =>{
-      this.route.navigate(['/']);
-      this.close();
+      this.mensagem = err.error.message;
+      console.log(this.mensagem);
+      //location.reload();
+      this.route.navigate(['/#login']);
     })
   }
   close(){
-    $("#login").modal("hide");
+    $("#login").hide();
   }
 
 }

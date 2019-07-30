@@ -14,5 +14,6 @@ export class MenuComponent implements OnInit {
   }
   logout(){
     this.auth.logout();
+    location.reload();
   }
 }
