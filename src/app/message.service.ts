@@ -19,7 +19,7 @@ export class MessageService {
   sendMessage(contato: ContatoModel) : Observable<any>{
     return this.http.post("https://codesolidario-api.herokuapp.com/contato/", contato);
   }
-  deletaIdeia(IdIdeia) : Observable<any>{
-    return this.http.delete("https://codesolidario-api.herokuapp.com/ideias/"+IdIdeia);
+  deletaIdeia(id) : Observable<any>{
+    return this.http.delete("https://codesolidario-api.herokuapp.com/ideias/"+id);
   }
 }
