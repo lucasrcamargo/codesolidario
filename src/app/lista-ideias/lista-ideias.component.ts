@@ -26,5 +26,11 @@ export class ListaIdeiasComponent implements OnInit {
       this.ideias = ideias;
     });
   }
+  deletar(id){
+    this.service.deletaIdeia(id).subscribe(res =>{
+      
+    })
+    this.ngOnInit();
+  }
 
 }

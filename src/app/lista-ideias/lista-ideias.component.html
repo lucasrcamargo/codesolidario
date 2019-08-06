@@ -1,18 +1,17 @@
 <app-inner-banner></app-inner-banner>
 <h4>Ideias</h4>
 <div class="container py-3" >
-  <div class="row" *ngFor="let ideia of ideias">
-    <div class="col s12 m3">
-      <p>{{ ideia.nome }}</p>
-    </div>
-    <div class="col s12 m3">
-      <p>{{ ideia.email }}</p>
-    </div>
-    <div class="col s12 m3">
-      <p>{{ ideia.categoria }}</p>
-    </div>
-    <div class="col s12 m3">
-      <p>{{ ideia.descricao }}</p>
-    </div>
-  </div>
+    <table>
+        <tr>
+          <th>Categoria</th>
+          <th>Descrição</th>
+          <th>Ação</th>
+        </tr>
+        <tr *ngFor="let ideia of ideias">
+          <td>{{ ideia.categoria }}</td>
+          <td> {{ ideia.descricao }} </td>
+          <td><button (click)="deletar(ideia.IdIdeia)" ><i class="fas fa-trash"></i></button></td>
+        </tr>
+      </table>
 </div>
+
