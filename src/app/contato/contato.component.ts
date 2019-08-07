@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class ContatoComponent implements OnInit {
   contato : ContatoModel = new ContatoModel();
+  subject;
   constructor(private messageService: MessageService, private route: Router) { }
 
   ngOnInit() {
@@ -28,5 +29,4 @@ export class ContatoComponent implements OnInit {
   close(){
     $("#contato").hide();
   }
-
 }
